@@ -20,14 +20,14 @@ public class RegistrationController {
     private UserRepository userRepository;
 
     @GetMapping
-    public String registrants(){
+    public String registrants() {
         return "registration";
     }
 
     @PostMapping
-    public String addUser(User user, Map<String, Object> model){
+    public String addUser(User user, Map<String, Object> model) {
         User userFromDB = userRepository.findByUsername(user.getUsername());
-        if (userFromDB!=null){
+        if (userFromDB != null) {
             model.put("message", "User already exists!");
             return "registration";
         }
