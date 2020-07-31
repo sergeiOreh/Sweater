@@ -4,6 +4,7 @@
 <@c.page>
 <div>
     <@l.logout/>
+    <span><a href="/user">List of users</a></span>
 </div>
 <#-- "_csrf" needs only for POST-requests-->
 <div>
